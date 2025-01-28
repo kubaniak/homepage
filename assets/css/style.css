@@ -3,7 +3,7 @@ html, body {
 }
 
 body {
-    background-image: url('../img/IMG_3442.JPEG');
+    background-image: url('../img/background_03.JPEG');
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
@@ -46,6 +46,20 @@ h1 {
 .transparent-navbar {
     background-color: transparent; 
     border: none; 
+}
+
+.login-icon {
+    color: #777;
+    font-size: 1.5rem;
+    margin: 0 1rem;
+    margin-right: 30px; 
+    transition: color 0.3s ease;
+    text-decoration: none;
+}
+
+.login-icon:hover {
+    color: #FF5A5F;
+    text-decoration: none;
 }
 
 .container {
@@ -255,3 +269,4 @@ footer {
         font-size: 2rem !important;
     }
 }
+
