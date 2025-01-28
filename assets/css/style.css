@@ -1,0 +1,257 @@
+html, body {
+    height: 100%;
+}
+
+body {
+    background-image: url('../img/IMG_3442.JPEG');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+    color: #333;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    min-height: 100vh;
+    font-family: 'Minion Pro Regular', Arial, sans-serif;
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.7);
+    z-index: -1;
+}
+
+h1 {
+    color: #007bff;
+}
+
+.navbar {
+    padding: 15px;
+}
+
+.navbar-brand {
+    margin-left: 30px; 
+    font-family: 'Minion Pro', serif;
+    font-size: 2.5rem !important;
+}
+
+.transparent-navbar {
+    background-color: transparent; 
+    border: none; 
+}
+
+.container {
+    flex: 1;
+    opacity: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    transition: opacity 1.5s ease-out;
+}
+
+.fade-in {
+    opacity: 1;
+}
+
+footer {
+    padding: 20px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    margin-top: auto;
+}
+
+.transparent-footer {
+    border: none;
+    background-color: transparent;
+}
+
+.btn {
+    width: auto;
+    max-width: 250px;
+    margin: 0 auto;
+}
+
+.divider {
+    border-top: 1px solid #ccc;
+    width: 80%;
+    margin: 20px auto;
+    opacity: 0.7;
+}
+
+/* Fancy link styles */
+.fancy-link {
+    display: inline-block;
+    font-size: 1.1rem; /* Slightly bigger font size */
+    color: #333;
+    text-decoration: none;
+    padding: 0rem 0rem;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.fancy-link::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #FF5A5F; 
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.3s ease;
+}
+
+.fancy-link:hover {
+    color: #FF5A5F;
+}
+
+.fancy-link:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+/* Updated styles for the downloads table */
+.downloads-table {
+    display: table;
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 0px;
+    margin-top: 30px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08); /* Added shadow */
+    border-radius: 8px; /* Rounded corners for the entire table */
+    overflow: hidden; /* Ensures the rounded corners are visible */
+}
+
+.downloads-header, .downloads-row {
+    display: table-row;
+}
+
+.downloads-header .download-cell {
+    border-radius: 0px !important;
+    background-color: #f1f1f1; /* Light background for header */
+    font-weight: bold;
+}
+
+.downloads-row {
+    background-color: transparent !important;
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+    transition: backdrop-filter 0.3s ease; /* Smooth transition for backdrop filter */
+}
+
+.downloads-row:hover {
+    background-color: rgba(220, 220, 220, 0.3) !important; /* Light gray with some transparency on hover */
+    backdrop-filter: blur(4px)
+}
+
+.download-cell {
+    display: table-cell;
+    padding: 12px; /* Slightly increased padding */
+    vertical-align: middle;
+    text-align: center;
+    width: 20%; /* Adjust for 5 columns */
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05); /* Light separator between rows */
+}
+
+.downloads-row:last-child .download-cell {
+    border-bottom: none; /* Remove border for last row */
+}
+
+.download-cell a {
+    color: #333;
+    text-decoration: none;
+    transition: color 0.1s ease, background-color 0.1s ease;
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 3px;
+    background-color: transparent; /* No background */
+}
+
+.download-cell a:hover {
+    color: #FF5A5F; /* Turn red on hover */
+}
+
+/* Styles for the download icon */
+.download-cell a .fas.fa-download {
+    font-size: 1.2em; /* Adjust size as needed */
+    color: #333;
+    margin: 0 1rem;
+    transition: color 0.3s ease;
+}
+
+.download-cell a:hover .fas.fa-download {
+    color: #FF5A5F; /* Turn red on hover */
+}
+
+.downloads-header .download-cell {
+    font-weight: bold;
+    background-color: #f1f1f1;
+    border-radius: 5px;
+}
+
+.downloads-row:nth-child(even) {
+    background-color: rgba(241, 241, 241, 0.5);
+}
+
+.downloads-row:hover {
+    background-color: rgba(0, 123, 255, 0.1);
+}
+
+.socials {
+    margin-bottom: 0.8rem;
+}
+
+.social-icon {
+    color: #333;
+    font-size: 1.5rem;
+    margin: 0 1rem;
+    transition: color 0.3s ease;
+    text-decoration: none;
+}
+
+.social-icon:hover {
+    color: #FF5A5F;
+    text-decoration: none;
+}
+
+@font-face {
+    font-family: 'Minion Pro Regular';
+    src: url('../fonts/MinionPro-Regular.otf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Minion Pro Semibold';
+    src: url('../fonts/MinionPro-Semibold.otf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Minion Pro Bold';
+    src: url('../fonts/MinionPro-Bold.otf') format('truetype');
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    .downloads-table {
+        display: block;
+        overflow-x: auto;
+    }
+
+    .download-cell {
+        padding: 8px;
+        font-size: 0.9em;
+    }
+
+    .navbar-brand {
+        font-size: 2rem !important;
+    }
+}
