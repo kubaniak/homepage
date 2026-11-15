@@ -66,12 +66,19 @@
         <div class="wrap">
             <span>&copy; Martin Zahariev</span>
             <nav aria-label="Contact">
-                <a href="mailto:mzahariev@ethz.ch">Email</a>
+                <a href="#" data-u="veirahazm" data-d="hc.zhte">Email</a>
                 <a href="https://www.linkedin.com/in/martin-k-zahariev/" target="_blank" rel="noopener">LinkedIn</a>
                 <a href="https://www.instagram.com/martin.zhv/" target="_blank" rel="noopener">Instagram</a>
                 <a href="http://zahariev.ch">zahariev.ch</a>
             </nav>
         </div>
     </footer>
+    <script>
+    // Assemble the mail link at runtime so the address is not in the page source.
+    document.querySelectorAll("a[data-u]").forEach(function (a) {
+        var r = function (s) { return s.split("").reverse().join(""); };
+        a.href = "mai" + "lto:" + r(a.dataset.u) + String.fromCharCode(64) + r(a.dataset.d);
+    });
+    </script>
 </body>
 </html>
