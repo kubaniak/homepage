@@ -1,2 +1,5 @@
-# Ignore all files in the assets/downloads folder
-assets/downloads/*
+# Downloads: only my own notes are published
+assets/downloads/**/Problem Set*.pdf
+assets/downloads/**/.htaccess*
+assets/downloads/auth.html
+Thumbs.db
